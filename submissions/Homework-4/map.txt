@@ -10,7 +10,7 @@ japanese	EastAsian
 North-African	African
 MiddleEastern	MiddleEastern
 Indian	SouthAsian
-asian	
+asian	EastAsian
 Italy	SouthernEuropean
 EasternEuropean_Russian	EasternEuropean
 Israel	MiddleEastern
@@ -63,7 +63,7 @@ Southern_SoulFood	NorthAmerican
 Malaysia	SoutheastAsian
 Austria	WesternEuropean
 English_Scottish	WesternEuropean
-Asian	
+Asian	EastAsian
 Southwestern	NorthAmerican
 Japan	EastAsian
 italian	SouthernEuropean
