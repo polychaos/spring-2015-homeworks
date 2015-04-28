@@ -1,0 +1,294 @@
+{
+  "axes": [],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "x": "Wyoming",
+          "y": 563626.0
+        },
+        {
+          "x": "Vermont",
+          "y": 625741.0
+        },
+        {
+          "x": "North Dakota",
+          "y": 672591.0
+        },
+        {
+          "x": "Alaska",
+          "y": 710231.0
+        },
+        {
+          "x": "South Dakota",
+          "y": 814180.0
+        },
+        {
+          "x": "Delaware",
+          "y": 897934.0
+        },
+        {
+          "x": "Montana",
+          "y": 989415.0
+        },
+        {
+          "x": "Rhode Island",
+          "y": 1052567.0
+        },
+        {
+          "x": "New Hampshire",
+          "y": 1316470.0
+        },
+        {
+          "x": "Maine",
+          "y": 1328361.0
+        },
+        {
+          "x": "Hawaii",
+          "y": 1360301.0
+        },
+        {
+          "x": "Idaho",
+          "y": 1567582.0
+        },
+        {
+          "x": "Nebraska",
+          "y": 1826341.0
+        },
+        {
+          "x": "West Virginia",
+          "y": 1852994.0
+        },
+        {
+          "x": "New Mexico",
+          "y": 2059179.0
+        },
+        {
+          "x": "Nevada",
+          "y": 2700551.0
+        },
+        {
+          "x": "Utah",
+          "y": 2763885.0
+        },
+        {
+          "x": "Kansas",
+          "y": 2853118.0
+        },
+        {
+          "x": "Arkansas",
+          "y": 2915918.0
+        },
+        {
+          "x": "Mississippi",
+          "y": 2967297.0
+        },
+        {
+          "x": "Iowa",
+          "y": 3046355.0
+        },
+        {
+          "x": "Connecticut",
+          "y": 3574097.0
+        },
+        {
+          "x": "Oklahoma",
+          "y": 3751351.0
+        },
+        {
+          "x": "Oregon",
+          "y": 3831074.0
+        },
+        {
+          "x": "Kentucky",
+          "y": 4339367.0
+        },
+        {
+          "x": "Louisiana",
+          "y": 4533372.0
+        },
+        {
+          "x": "South Carolina",
+          "y": 4625364.0
+        },
+        {
+          "x": "Alabama",
+          "y": 4779736.0
+        },
+        {
+          "x": "Colorado",
+          "y": 5029196.0
+        },
+        {
+          "x": "Minnesota",
+          "y": 5303925.0
+        },
+        {
+          "x": "Wisconsin",
+          "y": 5686986.0
+        },
+        {
+          "x": "Maryland",
+          "y": 5773552.0
+        },
+        {
+          "x": "Missouri",
+          "y": 5988927.0
+        },
+        {
+          "x": "Tennessee",
+          "y": 6346105.0
+        },
+        {
+          "x": "Arizona",
+          "y": 6392017.0
+        },
+        {
+          "x": "Indiana",
+          "y": 6483802.0
+        },
+        {
+          "x": "Massachusetts",
+          "y": 6547629.0
+        },
+        {
+          "x": "Washington",
+          "y": 6724540.0
+        },
+        {
+          "x": "Virginia",
+          "y": 8001024.0
+        },
+        {
+          "x": "New Jersey",
+          "y": 8791894.0
+        },
+        {
+          "x": "North Carolina",
+          "y": 9535483.0
+        },
+        {
+          "x": "Georgia",
+          "y": 9687653.0
+        },
+        {
+          "x": "Michigan",
+          "y": 9883640.0
+        },
+        {
+          "x": "Ohio",
+          "y": 11536504.0
+        },
+        {
+          "x": "Pennsylvania",
+          "y": 12702379.0
+        },
+        {
+          "x": "Illinois",
+          "y": 12830632.0
+        },
+        {
+          "x": "Florida",
+          "y": 18801310.0
+        },
+        {
+          "x": "New York",
+          "y": 19378102.0
+        },
+        {
+          "x": "Texas",
+          "y": 25145561.0
+        },
+        {
+          "x": "California",
+          "y": 37253956.0
+        }
+      ]
+    },
+    {
+      "format": {
+        "feature": "us_states.geo",
+        "type": "topojson"
+      },
+      "name": "states",
+      "transform": [
+        {
+          "as": "value",
+          "default": "noval",
+          "key": "data.properties.NAME",
+          "type": "zip",
+          "with": "table",
+          "withKey": "data.x"
+        },
+        {
+          "test": "d.path!='noval' && d.value!='noval'",
+          "type": "filter"
+        },
+        {
+          "projection": "albersUsa",
+          "scale": 1500,
+          "translate": [
+            480,
+            250
+          ],
+          "type": "geopath",
+          "value": "data"
+        }
+      ],
+      "url": "us_states.topo.json"
+    }
+  ],
+  "height": 500,
+  "legends": [],
+  "marks": [
+    {
+      "from": {
+        "data": "states"
+      },
+      "properties": {
+        "enter": {
+          "path": {
+            "field": "path"
+          },
+          "stroke": {
+            "value": "#000000"
+          },
+          "strokeOpacity": {
+            "value": 0.85
+          }
+        },
+        "update": {
+          "fill": {
+            "field": "value.data.y",
+            "scale": "color"
+          }
+        }
+      },
+      "type": "path"
+    }
+  ],
+  "padding": "auto",
+  "scales": [
+    {
+      "domain": [
+        563626.0,
+        19118545.6
+      ],
+      "name": "color",
+      "range": [
+        "#fff7ec",
+        "#fee8c8",
+        "#fdd49e",
+        "#fdbb84",
+        "#fc8d59",
+        "#ef6548",
+        "#d7301f",
+        "#b30000",
+        "#7f0000"
+      ],
+      "type": "quantize"
+    }
+  ],
+  "width": 960
+}
